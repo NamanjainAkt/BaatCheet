@@ -1,5 +1,5 @@
 import { Message } from "../models/Message.js"
-import { User } from "../models/user.js"
+import { User } from "../models/User.js"
 import cloudinary from "../lib/cloudinary.js"
 import { io, userSocketMap } from "../server.js"
 //get all users expect the logged in user
