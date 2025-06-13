@@ -15,10 +15,10 @@ export const AuthProvider = ({ children }) => {
     const checkAuth = async () => {
         try {
             if (!token) return
-            
+
             // Ensure token is in headers
             axios.defaults.headers.common["token"] = token
-            
+
             const { data } = await axios.get("/api/auth/check")
             if (data.success) {
                 setAuthUser(data.user)
@@ -99,6 +99,23 @@ export const AuthProvider = ({ children }) => {
             setOnlineUsers(userIds)
         })
     }
+    // Add updateProfile function
+    const updateProfile = async (updates) => {
+        try {
+            const { data } = await axios.put("/api/auth/update-profile", updates)
+            if (data.success) {
+                setAuthUser(data.user)
+                toast.success("Profile updated successfully")
+                return true
+            } else {
+                toast.error(data.message)
+                return false
+            }
+        } catch (error) {
+            toast.error(error.message)
+            return false
+        }
+    }
 
     const value = {
         axios,
@@ -106,7 +123,8 @@ export const AuthProvider = ({ children }) => {
         onlineUsers,
         socket,
         login,
-        logout: handleLogout
+        logout: handleLogout,
+        updateProfile // Add updateProfile to context value
     }
 
     return (
