@@ -51,7 +51,7 @@ function ChatContainer() {
 
       {/*----------------- header---------------------- */}
       <div className='flex items-center gap-3 py-3 mx-4 border-b border-stone-500'>
-        <img src={selectedUser.profilePic || assets.avatar_icon} alt="" className='w-8 rounded-full' />
+        <img src={selectedUser.profilePic || assets.avatar_icon} alt="" className='w-8 h-8 rounded-full' />
         <p
           className='flex-1 text-lg text-white flex items-center gap-2'
         >{selectedUser.fullName}
@@ -80,7 +80,7 @@ function ChatContainer() {
               }
 
               <div className='text-center text-xs'>
-                <img src={msg.senderId === authUser._id ? authUser?.profilePic || assets.avatar_icon : selectedUser?.profilePic || assets.avatar_icon} alt="" className='w-7 rounded-full' />
+                <img src={msg.senderId === authUser._id ? authUser?.profilePic || assets.avatar_icon : selectedUser?.profilePic || assets.avatar_icon} alt="" className='w-7 h-7 rounded-full' />
                 <p className='text-gray-500'>{formatMessageTime(msg.createdAt)}</p>
               </div>
 
