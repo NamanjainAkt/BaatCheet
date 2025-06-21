@@ -12,7 +12,7 @@ import giphy from './assets/giphy.webp'
 function App() {
   const { authUser } = useContext(AuthContext)
   return (
-    <div style={{backgroundImage:`url(${giphy})`}} className={`bg-cover `}>
+    <div style={{backgroundImage:`url(${giphy})`}} className={`bg-cover backdrop-blur-xl`}>
       <Toaster />
       <Routes>
         <Route path='/' element={authUser ? <HomePage /> : <Navigate to="/login" />} />
