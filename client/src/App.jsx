@@ -8,10 +8,11 @@ import { Toaster } from "react-hot-toast"
 import { Navigate } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext'
 import bg3 from './assets/bg3.jpg'
+import giphy from './assets/giphy.webp'
 function App() {
   const { authUser } = useContext(AuthContext)
   return (
-    <div style={{backgroundImage:`url(${bg3})`}} className={`bg-cover `}>
+    <div style={{backgroundImage:`url(${giphy})`}} className={`bg-cover `}>
       <Toaster />
       <Routes>
         <Route path='/' element={authUser ? <HomePage /> : <Navigate to="/login" />} />
