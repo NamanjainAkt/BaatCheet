@@ -74,7 +74,7 @@ function LoginPage() {
           }
         </button>
 
-        <div className='flex items-center gap-2 text-sm text-gray-500'>
+        <div className='flex items-center gap-2 text-sm text-zinc-800'>
           <input type="checkbox" required id='check' />
           <label htmlFor="check">Agree to the terms of use & privacy policy.</label>
         </div>
@@ -82,13 +82,13 @@ function LoginPage() {
         <div className='flex flex-col gap-2'>
           {
             currState === "Sign up" ? (
-              <p className='text-sm text-gray-600'>Already have an account? <span
+              <p className='text-sm text-zinc-800'>Already have an account? <span
                 onClick={() => { setCurrState("Login"); setIsDataSubmitted(false) }}
                 className='font-medium text-violet-500 cursor-pointer'>Login here</span></p>
             ) : (
               <p
                 onClick={() => { setCurrState("Sign up") }}
-                className='text-sm text-gray-600'>Create a account <span className='font-medium text-violet-500 cursor-pointer'>Click here</span></p>
+                className='text-sm text-zinc-800'>Create a account <span className='font-medium text-violet-500 cursor-pointer'>Click here</span></p>
             )
           }
         </div>

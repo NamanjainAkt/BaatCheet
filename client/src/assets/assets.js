@@ -11,7 +11,8 @@ import arrow_icon from './arrow_icon.png'
 import code from './code.svg'
 import bgImage from './bgImage.svg'
 import bg3 from './bg3.jpg'
-import giphy from './giphy.webp'
+import giphy from './giphy.gif'
+
 
 const assets = {
     avatar_icon,
@@ -27,8 +28,6 @@ const assets = {
     code,
     bgImage,
     bg3,
-    giphy
-
 }
 
 export default assets;

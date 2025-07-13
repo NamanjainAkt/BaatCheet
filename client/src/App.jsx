@@ -7,8 +7,9 @@ import ProfilePage from './pages/ProfilePage'
 import { Toaster } from "react-hot-toast"
 import { Navigate } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext'
-import bg3 from './assets/bg3.jpg'
-import giphy from './assets/giphy.webp'
+import giphy from './assets/giphy.gif'
+
+
 function App() {
   const { authUser } = useContext(AuthContext)
   return (
