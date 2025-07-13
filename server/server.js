@@ -9,6 +9,10 @@ import { Server } from "socket.io"
 
 //create express app and http server
 const app = express()
+app.use(cors({
+  origin: 'https://baatcheet-nj.netlify.app',
+  credentials: true,
+}));
 const server = http.createServer(app)
 
 // initialize socket.io server
@@ -35,7 +39,7 @@ io.on("connection",(socket)=>{
 
 //middleware setup
 app.use(express.json({ limit: '60mb' }))
-app.use(cors())
+
 
 //routes setup
 app.use("/api/status", (req, res) => {
