@@ -22,8 +22,8 @@
 |------------|-------------------------|
 | Frontend   | JavaScript (React)      |
 | Backend    | JavaScript (Node.js/Express) |
-| Database   | (Not specified)         |
-| Other      | (Not specified)         |
+| Database   | MongoDB      |
+| WebSocket    | Socket.io      |
 
 ## Getting Started
 
