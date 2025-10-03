@@ -10,7 +10,7 @@ import { Server } from "socket.io"
 //create express app and http server
 const app = express()
 app.use(cors({
-  origin: 'https://baatcheet-nj.netlify.app',
+  origin: 'https://baatcheet-chat.netlify.app',
   credentials: true,
 }));
 const server = http.createServer(app)
